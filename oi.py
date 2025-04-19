@@ -41,4 +41,4 @@ subprocess.run(f'explorer "{output_dir}"')
 
 # Retornar a lista de imagens extraídas
 print(image_list)
-print('boa tarde')
+
