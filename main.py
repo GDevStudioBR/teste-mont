@@ -40,5 +40,3 @@ for page_num in range(len(pdf_document)):
 subprocess.run(f'explorer "{output_dir}"')
 
 # Retornar a lista de imagens extraídas
-print(image_list)
-print('boa tarde')
