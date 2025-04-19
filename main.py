@@ -29,4 +29,15 @@ for page_num in range(len(pdf_document)):
         image_filename = f"figure_{len(image_list) + 1}.{image_ext}"
         image_path = os.path.join(output_dir, image_filename)
 
+        # Salvar a imagem
+        with open(image_path, "wb") as img_file:
+            img_file.write(image_bytes)
 
+        # Adicionar aos dados extraídos
+        image_list.append({"figure": f"Figura {len(image_list) + 1}", "path": image_path})
+
+# Abrir a pasta contendo as imagens no Explorer (Windows)
+subprocess.run(f'explorer "{output_dir}"')
+
+# Retornar a lista de imagens extraídas
+print(image_list)
