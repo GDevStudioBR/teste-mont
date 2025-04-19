@@ -43,4 +43,4 @@ subprocess.run(f'explorer "{output_dir}"')
 print(image_list)
 print('boa tarde')
 
-
+print('oiufgdfgfd')
