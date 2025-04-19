@@ -40,3 +40,15 @@ for page_num in range(len(pdf_document)):
 subprocess.run(f'explorer "{output_dir}"')
 
 # Retornar a lista de imagens extraídas
+        # Salvar a imagem
+        with open(image_path, "wb") as img_file:
+            img_file.write(image_bytes)
+
+        # Adicionar aos dados extraídos
+        image_list.append({"figure": f"Figura {len(image_list) + 1}", "path": image_path})
+
+# Abrir a pasta contendo as imagens no Explorer (Windows)
+subprocess.run(f'explorer "{output_dir}"')
+
+# Retornar a lista de imagens extraídas
+print(image_list)
